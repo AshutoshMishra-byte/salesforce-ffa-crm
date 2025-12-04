@@ -1,0 +1,38 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId,flexipage:availableForAllPageTypes" 
+    access="global" >
+    <aura:html tag="style">
+        .slds-modal__container {
+            width: 90%; 
+            max-width: 98vw; 
+        }
+        .modal-body {
+            height: auto !important;
+            min-height:50vh !important;
+            max-height: 90vh !important;
+            overflow-y: auto !important; 
+        }
+        .customFooter {
+            display: inline !important;
+        }
+        .cuf-content {
+            padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+            padding: 0rem !important;
+        }
+        .slds-modal__content {
+            overflow-y: auto !important; 
+            height: auto !important;
+            min-height:60vh !important;
+            max-height: 90vh !important; 
+        }
+            
+        }
+    </aura:html>
+<aura:attribute name="recordId" type="String" default="{!v.recordId}"/>
+    <div class="slds-modal__content slds-p-around_x-medium" style="max-height: 500px;">
+ 
+<c:competitorForm aura:id="lWC" recordId="{!v.recordId}"></c:competitorForm>
+</div>
+
+</aura:component>
